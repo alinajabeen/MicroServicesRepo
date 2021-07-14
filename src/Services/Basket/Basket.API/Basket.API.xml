@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Basket.API</name>
+    </assembly>
+    <members>
+        <member name="M:Basket.API.Controllers.BasketController.GetBasket(System.String)">
+             <summary>
+             Get Basket Info By UserName
+             </summary>
+             <remarks>userName="Alina"</remarks>
+             <returns></returns>
+            
+        </member>
+        <member name="M:Basket.API.Controllers.BasketController.UpdateBasket(Basket.API.Entities.ShoppingCart)">
+            <summary>
+            To Update the Basket
+            </summary>
+            <param name="basket"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
