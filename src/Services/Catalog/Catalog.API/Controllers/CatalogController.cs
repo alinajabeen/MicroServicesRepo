@@ -2,9 +2,7 @@
 using Catalog.API.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -55,7 +53,7 @@ namespace Catalog.API.Controllers
         public async Task<ActionResult<Product>> InsertProduct([FromBody] Product product)
         {
             await _productRepository.InsertProduct(product);
-            return CreatedAtRoute("GetProduct", new { Id = product.Id }, product);
+            return CreatedAtRoute("GetProduct", new { product.Id }, product);
         }
         //If we dont want any specific response then we will use IActionResult otherwise we will use ActionResult
         [HttpPut]
