@@ -1,9 +1,6 @@
 ﻿using Discount.API.Entities;
 using Discount.API.Repositories.IRepository;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -32,7 +29,7 @@ namespace Discount.API.Controllers
             await _discountRepository.CreateDiscount(coupon);
             return CreatedAtRoute("GetDiscount", new { productName = coupon.ProductName }, coupon);
         }
-        [HttpPost]
+        [HttpPut]
         [ProducesResponseType(typeof(Coupon), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Coupon>> UpdateDiscount(Coupon coupon)
         {
