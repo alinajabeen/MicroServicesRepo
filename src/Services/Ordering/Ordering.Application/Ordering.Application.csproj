@@ -1,3 +1,7 @@
+<!--Application Layer should cover all business use cases with exceptions, this layer is responsible for business use cases-->
+<!--Behaviour : Behaviour of application-->
+<!--Contracts : It would cover the application capabilities-->
+<!--Features : It will apply the CQRS Design Patern for Handling business use cases-->
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -6,6 +10,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Ordering.Domain\Ordering.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+    <Folder Include="Features\" />
+    <Folder Include="Behaviours\" />
   </ItemGroup>
 
 </Project>
