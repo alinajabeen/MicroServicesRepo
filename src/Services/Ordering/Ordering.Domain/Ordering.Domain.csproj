@@ -1,3 +1,5 @@
+<!--Domain Layer should be simple and should include domain related common objects-->
+
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
