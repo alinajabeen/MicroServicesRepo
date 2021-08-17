@@ -1,6 +1,7 @@
-<!--Application Layer should cover all business use cases with exceptions, this layer is responsible for business use cases-->
+﻿<!--Application Layer should cover all business use cases with exceptions, this layer is responsible for business use cases-->
 <!--Behaviour : Behaviour of application-->
 <!--Contracts : It would cover the application capabilities-->
+        <!--Persistence: Database related contracts Repository Pattern under this layer-->
 <!--Features : It will apply the CQRS Design Patern for Handling business use cases-->
 <Project Sdk="Microsoft.NET.Sdk">
 
@@ -13,9 +14,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\" />
-    <Folder Include="Features\" />
     <Folder Include="Behaviours\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="FluentValidation" Version="10.3.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
