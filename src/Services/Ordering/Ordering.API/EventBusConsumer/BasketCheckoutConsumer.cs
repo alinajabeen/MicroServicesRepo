@@ -5,8 +5,6 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using Ordering.Application.Features.Orders.Commands.CheckoutOrder;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Ordering.API.EventBusConsumer
@@ -22,7 +20,7 @@ namespace Ordering.API.EventBusConsumer
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-        }
+        } 
 
         public async Task Consume(ConsumeContext<BasketCheckoutEvent> context)
         {
